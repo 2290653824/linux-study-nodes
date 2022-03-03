@@ -1,8 +1,6 @@
-
 > shell是一个命令行解释，它为用户提供了一个向linux发送请求以便运行的程序，用户可以使用shell来启动、挂起、停止甚至是编写一些程序。
-
 # 一.Shell基本要求
-- 脚本以#!/bin/bash 开头
+- 脚本以`#!/bin/bash` 开头
 - 脚本需要有可执行权限x
 
 ## 1.shell脚本的执行方式
@@ -15,8 +13,8 @@
 3.变量名习惯用大写
 
 ## 3.将命令的结果赋给变量
-A='date'
-A='$(date)'
+`A='date'`
+`A='$(date)'` 
 
 ## 4.linux中的预定义变量
 预定义变量就是shell中事先预定好的变量
@@ -30,7 +28,7 @@ A='$(date)'
 
 `$n`:n为数字，$0代表命令本身，$1到$9表示命令后面的参数，但有10个以上的命令时，参数需要用大括号包含，例如${10}
 
-`$*`:这个变量代表命令行中所有的参数，$*把所有的参数看成一个整体
+`$*`:这个变量代表命令行中所有的参数，`$*`把所有的参数看成一个整体
 
 `$@`:这个变量也代表所有参数，但是并没有看成一个整体
 
@@ -54,14 +52,13 @@ A='$(date)'
 - 常用的条件表达式：
 > 1.字符串比较：=
 > 
-> 2.两个整数比较。小于：-lt;小于等于`-le`;大于`-gt`;大于等于'-ge';等于`-eq`;不等于`-ne`。
+> 2.两个整数比较。小于：`-lt`;小于等于`-le`;大于`-gt`;大于等于'-ge';等于`-eq`;不等于`-ne`。
 > 
 > 3.按照文件权限进行判断。有读的权限`-r`;有写的权限`-w`;有执行的权限`-x`。
 > 
 > `[ -r /root/... ]`
 > 
-> 4.按照文件类型进行判断。文件存在并且是一个常规文件：`-f`;文件存在'-e';文件存在并且是一个目录:'-d';
-
+> 4.按照文件类型进行判断。文件存在并且是一个常规文件：`-f`;文件存在`-e`;文件存在并且是一个目录:`-d`;
 ## 9.流程控制
 ### if语句
 ```shell
@@ -116,14 +113,14 @@ done
 ```shell
 basename [path] [suffiex]
 ```
-![image](https://user-images.githubusercontent.com/85269099/156572485-1ebe644a-748c-47ef-8d8a-9b3b0112bc84.png)
+![image](https://img-blog.csdnimg.cn/img_convert/e3b7193949888cae535fd3f8fb7bb275.png)
 
 ####`dirname` 返回完整路径最后`/`前面的部分,常用于返回文件夹路径
 ```shell
 dirname [文件绝对路径]
 ```
 
-![image](https://user-images.githubusercontent.com/85269099/156572908-ef26df14-3644-4235-961f-54d44b34511f.png)
+![image](https://img-blog.csdnimg.cn/img_convert/a6744f6dd4f53784c19f9970412b4c20.png)
 
 #### `read`读取控制台输入
 ```shell
@@ -133,7 +130,7 @@ read (选项) (参数) 变量
 `-t`:指定读取值时的等待时间，如果没有在指定时间内输入，就不再等待
 
 
-![image](https://user-images.githubusercontent.com/85269099/156574001-246b929a-4ccd-4156-b17e-40e31729a095.png)
+![image](https://img-blog.csdnimg.cn/img_convert/a4d4750896a9c7538d2a89e975eb2f9c.png)
 
 
 ### 11.自定义函数
@@ -143,7 +140,6 @@ function funName()
 {
     程序块
 }
-
 #调用函数
 funName 
 ```
@@ -155,6 +151,5 @@ function getSum()
     A=$[ $1+$2 ]
     echo $A
 }
-
 getSum 1 3
 ```
