@@ -137,3 +137,24 @@ read (选项) (参数) 变量
 
 
 ### 11.自定义函数
+```shell
+#声明函数
+function funName()
+{
+    程序块
+}
+
+#调用函数
+funName 
+```
+
+如果我们要想函数中传递参数，使用`$n`方式进行传递
+```shell
+function getSum()
+{
+    A=$[ $1+$2 ]
+    echo $A
+}
+
+getSum 1 3
+```
