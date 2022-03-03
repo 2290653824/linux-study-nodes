@@ -1,3 +1,4 @@
+
 > shell是一个命令行解释，它为用户提供了一个向linux发送请求以便运行的程序，用户可以使用shell来启动、挂起、停止甚至是编写一些程序。
 
 # 一.Shell基本要求
@@ -107,5 +108,32 @@ do
    程序
 done
 ```
+
+`当然在循环语句当中也是可以使用continue和break来进行循环控制的`
 ## 10.函数
+### 1.系统函数
+#### `basename` 返回完整路径`/`后的名字，常用于获取文件名
+```shell
+basename [path] [suffiex]
+```
+![image](https://user-images.githubusercontent.com/85269099/156572485-1ebe644a-748c-47ef-8d8a-9b3b0112bc84.png)
+
+####`dirname` 返回完整路径最后`/`前面的部分,常用于返回文件夹路径
+```shell
+dirname [文件绝对路径]
+```
+
+![image](https://user-images.githubusercontent.com/85269099/156572908-ef26df14-3644-4235-961f-54d44b34511f.png)
+
+#### `read`读取控制台输入
+```shell
+read (选项) (参数) 变量
+```
+`-p`:指定读取值时的参数提示符
+`-t`:指定读取值时的等待时间，如果没有在指定时间内输入，就不再等待
+
+
+![image](https://user-images.githubusercontent.com/85269099/156574001-246b929a-4ccd-4156-b17e-40e31729a095.png)
+
+
 ### 11.自定义函数
